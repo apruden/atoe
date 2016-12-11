@@ -1,0 +1,37 @@
+name: atoe
+
+ghc-options: -Wall
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs:
+      - test
+    dependencies:
+      - hspec
+      - atoe
+
+library:
+  source-dirs:
+    - src
+
+executables:
+  example-servant-minimal:
+    main: exe/Main.hs
+    dependencies:
+      - atoe
+
+dependencies:
+  - base
+  - scotty
+  - warp
+  - hint
+  - acid-state
+  - lens
+  - wai-middleware-static
+  - mtl
+  - transformers
+  - containers
+  - safecopy
+  - http-types
+  - data-default
